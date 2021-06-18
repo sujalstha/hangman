@@ -2,8 +2,6 @@ import random
 import time
 
 words = ['Opera', 'Zeppelin', 'Jazz', 'Juneteenth', 'Github']
-chances = 6
-
 name = input("What is your name? ")
 time.sleep(1)
 print("Hello, " + name, "its time to play hangman!")
@@ -15,4 +13,11 @@ word = random.choices(words)
 for i in word:
     word = i
 
-print(word)
+while True:
+    failed = 0
+
+    for char in word:
+        if char in word:
+            print(char)
+        else:
+            print("-")
