@@ -8,41 +8,38 @@ print("\nHello, " + name, "its time to play Hangman!")
 time.sleep(1)
 print('Start Guessing\n--------------')
 
-words = random.choices(words)
+ele_word = random.choices(words)
 
-guess = ''
+guesses = ''
 
-turn = 6
-
-for word in words:
-    words = word
-
-print(words)
+for word in ele_word:
+    ele_word = word
 
 while True:
-    incorrect = 0
+    turn = 15
+    incorrect = 6
 
-    for letter in words:
-        if letter in guess:
+    for letter in ele_word:
+        if letter in guesses:
             print(letter)
         else:
             print("-")
-            incorrect += 1
-
-    if turn == 0:
-        print("You Win")
-        print("The word is: ", word)
-        break
 
     guess = input("guess a letter: ")
-    guess += guess
+    guesses += guess
 
-    if guess not in word:
-        turn -= 1
-        print("Wrong Try Again\nYou have", incorrect, " guesses.")
+    if guess not in ele_word:
+        incorrect -= 1
+        print("\nWrong Try Again\nYou have", incorrect, "guesses.")
 
-        if turn == 0:
-            print("Game Over, sorry you lost :C")
+    if turn == 0:
+        print("Game Over, sorry you lost :C")
+        break
+
+    if guesses == ele_word:
+        print("You Win")
+        print("The word is: ", ele_word)
+        break
 
 
 
