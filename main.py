@@ -4,23 +4,22 @@ import time
 words = ['Opera', 'Zeppelin', 'Jazz', 'Juneteenth', 'Github']
 name = input("What is your name? ")
 time.sleep(1)
-print("Hello, " + name, "its time to play hangman!")
+print("\nHello, " + name, "its time to play hangman!")
 time.sleep(1)
-print('start guessing')
+print('\nstart guessing')
 
 word = random.choices(words)
 
-for i in word:
-    word = i
+guess = ''
 
 turn = 6
 
 while True:
     incorrect = 0
 
-    for char in word:
-        if char in word:
-            print(char)
+    for letter in word:
+        if letter in guess:
+            print(letter)
         else:
             print("-")
             incorrect += 1
@@ -35,7 +34,10 @@ while True:
 
     if guess not in word:
         turn -= 1
-        print("Wrong Try Again\nYou have", incorrect)
+        print("Wrong Try Again\nYou have", incorrect, " guesses.")
+
+        if turn == 0:
+            print("Game Over, sorry you lost :C")
 
 
 
