@@ -1,2 +1,3 @@
 import random
 
+words is a var containing a list of strings 
