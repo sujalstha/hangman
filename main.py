@@ -16,7 +16,6 @@ for word in ele_word:
     ele_word = word
 
 while True:
-    turn = 15
     incorrect = 6
 
     for letter in ele_word:
@@ -37,8 +36,8 @@ while True:
         break
 
     if guesses == ele_word:
-        print("You Win")
-        print("The word is: ", ele_word)
+        print("\nYou Win")
+        print("\nThe word is: ", ele_word)
         break
 
 
