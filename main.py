@@ -6,7 +6,7 @@ name = input("What is your name? ")
 time.sleep(1)
 print("\nHello, " + name, "its time to play Hangman!")
 time.sleep(1)
-print('Start Guessing\n--------------')
+print('\nStart Guessing\n--------------')
 
 ele_word = random.choices(words)
 
@@ -40,6 +40,5 @@ while True:
         print("You Win")
         print("The word is: ", ele_word)
         break
-
 
 
