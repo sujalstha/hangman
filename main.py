@@ -18,14 +18,14 @@ for word in ele_word:
 turn = 15
 
 while turn > 0:
-    won = 0
+    won = 1
 
     for letter in ele_word:
         if letter in guesses:
             print(letter)
         else:
             print('-')
-            won += 1
+            won -= 1
 
     guess = input("guess a letter: ")
     guesses += guess
