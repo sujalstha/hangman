@@ -1,3 +1,11 @@
 import random
 
 words is a var containing a list of strings 
+
+input for you name
+
+time.sleep is a delay of executing code
+
+ele_words var picks one random element from the list
+
+guesses var is a empty string
